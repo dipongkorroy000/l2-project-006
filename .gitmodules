@@ -1,0 +1,6 @@
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/dipongkorroy000/L2-Assignment-006-client.git
+[submodule "backend"]
+	path = backend
+	url = https://github.com/dipongkorroy000/L2-Assignment-006-backend.git
