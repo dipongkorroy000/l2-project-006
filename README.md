@@ -72,7 +72,7 @@ The system manages parcel tracking, pickup requests, and delivery confirmations,
 #### ✅ Summary
 
 - Built with **Node.js**, **Mongoose**, **MongoDB**, **React**, **Redux**, and more modern tools  
-- Supports three roles: **Customer**, **Delivery Agent**, **Admin**  
+- Supports three roles: **Sender**, **Receiver**, **Admin**  
 - Provides secure authentication, parcel tracking, and delivery confirmations  
 - Ensures smooth and reliable parcel delivery workflow  
 
