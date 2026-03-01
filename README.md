@@ -13,12 +13,11 @@ The system manages parcel tracking, pickup requests, and delivery confirmations,
   - **Express.js** → Web framework for routing and middleware
   - **MongoDB** → Database for storing users, parcels, and delivery records
   - **Mongoose** → ODM for managing MongoDB models
-  - **Firebase Auth** → Secure authentication and role management
-  - **Stripe/Payment Gateway** → (if integrated) for handling delivery payments
+  - **SSLCommerz/Payment Gateway** → (if integrated) for handling delivery payments
 
 - **Frontend**
-  - **React / Next.js** → Client-side UI for customers and delivery agents
-  - **Bootstrap / TailwindCSS** → Styling and responsive design
+  - **React** → Client-side UI for customers and delivery agents
+  - **TailwindCSS** → Styling and responsive design
 
 ---
 
@@ -44,10 +43,10 @@ The system manages parcel tracking, pickup requests, and delivery confirmations,
 
 #### 🔐 Authentication Flow
 
-1. User registers or logs in via **Firebase Auth**  
-2. Firebase issues a secure token  
-3. Backend verifies token and assigns role (Customer, Agent, Admin)  
-4. Role-based access control ensures only authorized actions are allowed  
+1. User registers with email/password; password is hashed using **bcrypt** before storage.  
+2. Upon login, server validates credentials and generates a **JWT**.  
+3. Client stores the JWT and includes it in subsequent API requests.  
+4. Backend verifies the JWT and assigns role (Customer, Agent, Admin) for access control.  
 
 ---
 
@@ -63,7 +62,7 @@ The system manages parcel tracking, pickup requests, and delivery confirmations,
 
 #### 📊 Benefits of This System
 
-- **Security** → Firebase Auth ensures safe login and role management  
+- **Security** → JWT with bcrypt hashing ensures robust authentication and data protection.  
 - **Reliability** → Real-time parcel tracking and status updates  
 - **Scalability** → Node.js + MongoDB handle large numbers of users and parcels  
 - **Transparency** → Customers and agents can monitor delivery progress  
@@ -72,7 +71,7 @@ The system manages parcel tracking, pickup requests, and delivery confirmations,
 
 #### ✅ Summary
 
-- Built with **Node.js**, **Firebase**, **MongoDB**, and modern frontend tools  
+- Built with **Node.js**, **Mongoose**, **MongoDB**, **React**, **Redux**, and more modern tools  
 - Supports three roles: **Customer**, **Delivery Agent**, **Admin**  
 - Provides secure authentication, parcel tracking, and delivery confirmations  
 - Ensures smooth and reliable parcel delivery workflow  
@@ -84,4 +83,3 @@ The system manages parcel tracking, pickup requests, and delivery confirmations,
 - Add push notifications for parcel status updates  
 - Implement rating/review system for delivery agents  
 - Enhance admin dashboard with analytics and reporting  
-- Support multi-currency payments for international deliveries  
