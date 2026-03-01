@@ -64,14 +64,14 @@ The system manages parcel tracking, pickup requests, and delivery confirmations,
 
 - **Security** → JWT with bcrypt hashing ensures robust authentication and data protection.  
 - **Reliability** → Real-time parcel tracking and status updates  
-- **Scalability** → Node.js + MongoDB handle large numbers of users and parcels  
+- **Scalability** → Mongoose + MongoDB handle large numbers of users and parcels  
 - **Transparency** → Customers and agents can monitor delivery progress  
 
 ---
 
 #### ✅ Summary
 
-- Built with **Node.js**, **Mongoose**, **MongoDB**, **React**, **Redux**, and more modern tools  
+- Built with **Express.js**, **Mongoose**, **MongoDB**, **React**, **Redux**, and more modern tools  
 - Supports three roles: **Sender**, **Receiver**, **Admin**  
 - Provides secure authentication, parcel tracking, and delivery confirmations  
 - Ensures smooth and reliable parcel delivery workflow  
